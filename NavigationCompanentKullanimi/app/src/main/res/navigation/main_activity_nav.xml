@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.alperen.navigationcompanentkullanimi.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/detayGecis"
+            app:destination="@id/detayFragment"
+            app:popUpTo="@id/anasayfaFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/bottomSheetGecis"
+            app:destination="@id/bottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.alperen.navigationcompanentkullanimi.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="ad "
+            app:argType="string"
+            android:defaultValue="isim yok" />
+        <argument
+            android:name="yas "
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="boy"
+            app:argType="float"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="bekar"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="urun"
+            app:argType="com.alperen.navigationcompanentkullanimi.Urunler" />
+    </fragment>
+    <fragment
+        android:id="@+id/ayarlarFragment"
+        android:name="com.alperen.navigationcompanentkullanimi.AyarlarFragment"
+        android:label="fragment_ayarlar"
+        tools:layout="@layout/fragment_ayarlar" />
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.alperen.navigationcompanentkullanimi.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+</navigation>

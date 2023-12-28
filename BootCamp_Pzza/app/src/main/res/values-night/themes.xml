@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BootCamp_Pızza" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <color name="anaRenk">#EF6C00</color>
+        <color name="anaRenkKoyu">#E65100</color>
+        <color name="yaziRenk1">#FFFFFFFF</color>
+        <color name="yaziRenk2">#9F9F9F</color>
+    </style>
+</resources>

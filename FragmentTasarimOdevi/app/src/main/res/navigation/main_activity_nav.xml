@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/AFragment">
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.alperen.fragmenttasarimodevi.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/gecisB"
+            app:destination="@id/BFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.alperen.fragmenttasarimodevi.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_BFragment_to_YFragment"
+            app:destination="@id/YFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.alperen.fragmenttasarimodevi.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/gecisA"
+            app:destination="@id/AFragment" />
+        <action
+            android:id="@+id/gecisX"
+            app:destination="@id/XFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/YFragment"
+        android:name="com.alperen.fragmenttasarimodevi.YFragment"
+        android:label="fragment_y"
+        tools:layout="@layout/fragment_y" />
+    <fragment
+        android:id="@+id/XFragment"
+        android:name="com.alperen.fragmenttasarimodevi.XFragment"
+        android:label="fragment_x"
+        tools:layout="@layout/fragment_x" >
+        <action
+            android:id="@+id/gecisY"
+            app:destination="@id/YFragment" />
+    </fragment>
+</navigation>
