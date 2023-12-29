@@ -78,8 +78,6 @@ class MainActivity : AppCompatActivity() {
             Log.e("Sonuc : ", "Slider durum : ${binding.slider.progress}")
 
         }
-
-
         binding.toggleButton.addOnButtonCheckedListener { group, checkedId, isChecked ->
             kontrol = isChecked
             if (kontrol) {
